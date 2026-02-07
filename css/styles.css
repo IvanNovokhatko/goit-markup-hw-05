@@ -110,6 +110,8 @@ button {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active::after {
@@ -125,7 +127,6 @@ button {
 
 .nav-link:hover, .nav-link:focus {
     color: #404BBF;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list {
@@ -147,11 +148,12 @@ button {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list-link:hover, .contacts-list-link:focus {
     color: #404BBF;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* #endregion Header */
 
@@ -202,11 +204,12 @@ button {
 
     border-radius: 4px;
     padding: 16px 32px;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover, .hero-button:focus {
     background: #404BBF;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* #endregion Hero */
 
@@ -342,11 +345,12 @@ button {
     border-radius: 50%;
     padding: 12px;
     fill: #F4F4FD;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-list-link:hover {
     background-color: #404BBF;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* #endregion Team */
 
@@ -383,11 +387,12 @@ button {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+
+    transition: transform, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:hover, .portfolio-list-item:focus {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    transition: transform, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:hover .portfolio-overlay, .portfolio-list-item:focus .portfolio-overlay {
@@ -516,11 +521,12 @@ button {
     border-radius: 50%;
     padding: 8px;
     fill: #F4F4FD;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-footer-social-media-link:hover, .page-footer-social-media-link:focus {
     background-color: #31D0AA;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-footer-form-title {
@@ -548,11 +554,12 @@ button {
     color: #fff;
 
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-input:hover, .subscribe-input:focus, .subscribe-input:active {
-    border: 1px solid #31D0AA;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #31D0AA;    
 }
 
 .subscribe-input::placeholder {
@@ -581,6 +588,8 @@ button {
     padding: 8px 24px;
     width: 165px;
     background: #4D5AE5;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-send {
@@ -591,7 +600,6 @@ button {
 .subscribe-button:focus,
 .subscribe-button:active {
     background-color: #31D0AA;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* #endregion Footer */
 
@@ -603,7 +611,10 @@ button {
     top: 0;
     left: 0;
     background-color: rgb(46, 47, 66, 0.4);
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feedback-form {
@@ -629,13 +640,13 @@ button {
     height: 24px;
     background-color: rgb(252, 252, 252, 0);
     padding: 0px;
-}
 
-.feedback-form-close-button-background {
+    display: block;
     border-radius: 100%;
-    fill: #E7E9FC;
-    stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.1);
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feedback-form-close-button-content {
@@ -644,18 +655,18 @@ button {
     right: 50%;
     transform: translate(50%, -50%);
     fill: #2E2F42;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feedback-form-close-button:hover .feedback-form-close-button-background,
-.feedback-form-close-button:focus .feedback-form-close-button-background {
-    fill: #404BBF;
-    stroke: none;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.feedback-form-close-button:hover,
+.feedback-form-close-button:focus {
+    background-color: #404BBF;
+    border: none;
 }
 
 .feedback-form-close-button:hover .feedback-form-close-button-content, .feedback-form-close-button:focus .feedback-form-close-button-content {
     fill: #fff;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feedback-form-title {
@@ -700,54 +711,28 @@ button {
     width: 360px;
     height: 40px;
     padding-left: 38px;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .feedback-form-input:active, .feedback-form-input:focus {
     border: 1px solid #4D5AE5;
     outline: none;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.feedback-form-icon-person {
+.feedback-form-icon {
     position: absolute;
-    left: 19px;
-    top: 38px;
+    left: 16px;
+    bottom: 8px;
 
     fill: #2E2F42;
-}
 
-.feedback-form-input:active~.feedback-form-icon-person,
-.feedback-form-input:focus~.feedback-form-icon-person {
-    fill: #4D5AE5;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feedback-form-icon-phone {
-    position: absolute;
-    left: 19px;
-    top: 38px;
-
-    fill: #2E2F42;
-}
-
-.feedback-form-input:active~.feedback-form-icon-phone,
-.feedback-form-input:focus~.feedback-form-icon-phone {
+.feedback-form-input:active~.feedback-form-icon,
+.feedback-form-input:focus~.feedback-form-icon {
     fill: #4D5AE5;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.feedback-form-icon-envelope {
-    position: absolute;
-    left: 17.5px;
-    top: 38px;
-
-    fill: #2E2F42;
-}
-
-.feedback-form-input:active~.feedback-form-icon-envelope,
-.feedback-form-input:focus~.feedback-form-icon-envelope {
-    fill: #4D5AE5;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feedback-form-comment {
@@ -760,6 +745,8 @@ button {
 
     padding: 8px 16px;
     margin-bottom: 16px;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .feedback-form-comment::placeholder {
@@ -774,10 +761,10 @@ button {
 .feedback-form-comment:focus {
     border: 1px solid #4D5AE5;
     outline: none;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .checkbox-custom-label {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -797,25 +784,27 @@ button {
 
     border-radius: 2px;
     border: 1px solid rgb(46, 47, 66, 0.4);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .icon-mark {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 8px;
+    top: 8px;
     transform: translate(-50%, -50%);
     fill: #F4F4FD;
     display: none;
+
+    transition: display 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .checkbox:checked + label span.checkbox-custom {
     background-color: #404BBF;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .checkbox:checked + label .icon-mark {
     display: block;
-    transition: display 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .checkbox-custom-text {
@@ -854,6 +843,8 @@ button {
     width: 169px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: #4D5AE5;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .feedback-form-button:active {
@@ -861,6 +852,8 @@ button {
 }
 
 .is-open {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 /* #endregion Backdrop */
