@@ -560,6 +560,7 @@ button {
 
 .subscribe-input:hover, .subscribe-input:focus, .subscribe-input:active {
     border: 1px solid #31D0AA;    
+    outline: none;
 }
 
 .subscribe-input::placeholder {
@@ -630,6 +631,8 @@ button {
     width: 408px;
     padding-top: 72px;
     padding-bottom: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
     overflow: auto;
 
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -693,8 +696,6 @@ button {
 
     border-radius: 4px;
     width: 360px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .feedback-form-label {
@@ -789,6 +790,7 @@ button {
 }
 
 .checkbox-custom {
+    position: relative;
     display: block;
     width: 16px;
     height: 16px;
@@ -801,8 +803,8 @@ button {
 
 .icon-mark {
     position: absolute;
-    left: 8px;
-    top: 8px;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
 
@@ -821,7 +823,7 @@ button {
 .checkbox-custom-text {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.33;
     letter-spacing: 0.04em;
     color: #8E8F99;
 }
